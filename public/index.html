@@ -1,16 +1,30 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103896181-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-103896181-5');
+</script>
+
+<a id="weekday_link">Klick da anne, falls nüt passiert</a>
+
 <script>
 
 	var day_of_week = (new Date()).getDay();
 	var urls = [
 		'https://www.youtube.com/watch?v=7w_4FJip7sY', // Foals - Sunday
 		'https://www.youtube.com/watch?v=R8UUclE_9V8', // Monday Loop · Tomppabeats
-		'https://www.youtube.com/watch?v=1cMOnCbJrP0', // Tuesday - 乙三
+		'https://www.youtube.com/watch?v=1cMOnCbJrP0&t=27s', // Tuesday - 乙三
 		'https://mittwoch.li',
 		'https://www.youtube.com/watch?v=Y8xk1jRmMnA', // Rain & Deep Thunder Nature Sounds for Relax, Study, Sleep
 		'https://www.youtube.com/watch?v=KlyXNRrsk4A&t=50s', // Katy Perry - Last Friday Night (T.G.I.F.)
 		'https://www.youtube.com/watch?v=5hqK-A0UxKw', // Khalid, Kane Brown - Saturday Nights
 	];
 
-	window.location.href = urls[day_of_week];
+	var a_tag = document.querySelector("#weekday_link");
+	a_tag.setAttribute("href", urls[day_of_week]);
+	a_tag.click();
 
 </script>
